@@ -4,25 +4,28 @@
 	<head>
 		<meta charset="utf-8">
 		
-		<title>reveal.js</title>
+		<title>Unit Testing - for ColdFusion Developers</title>
 
-		<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="A complete overview of Unit Testing for ColdFUsion developers from the basics to advanced topics suck as mocking, stubbing and test decorators.">
+		<meta name="author"      content="Niall O'Doherty" />
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable"          content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<!-- Le fav and touch icons -->
+		<link rel="shortcut icon" href="favicon.ico">
 		
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 		
 		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/main.css" >
 		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
 
 		<link rel="stylesheet" href="lib/zenburn.css">
 	</head>
-	
+
 	<body>
-		
+
 		<div class="reveal">
 
 			<!-- Used to fade in a background when a specific slide state is reached -->
@@ -30,26 +33,152 @@
 			
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3 class="inverted">CSS 3D Presentations</h3>
+				
+				
+				<section data-state="titleSlide">
+					<p>
+						<img class="overrideSectionImage" width="453" height="178" src="assets/images/odoherty-logo-revrgb-smaller.png">
+					</p>
+
+					<h1>UNIT TESTING</h1>
+					<h3 class="inverted">For ColdFusion Developers</h3>
+					
 					<script>
 						// Delicously hacky. Look away.
 						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
 					</script>
 				</section>
 				
-				<section>
-					<h2>Heads Up</h2>
+				
+				<section data-state="about">
+					<h2>About Me</h2>
 					<p>
-						reveal.js is an easy to use, HTML based, presentation tool. You'll need a modern browser with 
-						support for CSS 3D transforms to see it in its full glory.
+						Web Applications developer for over 10 years now using mainly ColdFusion, HTML, Javascript and CSS.
 					</p>
 					<p>
-						<i><small>- <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small></i>
+						<ul id="contactList">
+							<!-- TODO: Replace the twitter / social links with social media icons -->
+							<li>Website:  <a target="_blank" href="http://niallodoherty.com">http://niallodoherty.com</a></li>
+							<li>Company:  <a target="_blank" href="http://odohertyconsultancy.com">http://odohertyconsultancy.com</a></li>
+							<li>Twitter:  <a target="_blank" href="https://twitter.com/#!/nodoherty">@nodoherty</a></li>
+							<li>LinkedIn: <a target="_blank" href="http://uk.linkedin.com/in/niallodoherty">http://uk.linkedin.com/in/niallodoherty</a></li>
+							<li>GitHub:   <a target="_blank" href="https://github.com/nodoherty">https://github.com/nodoherty</a></li>
+						</ul>
 					</p>
 				</section>
 				
+
+				<section data-state="overview">
+					<h2>Overview</h2>
+					<p class="overviewContent">
+						<ul id="overviewList">
+							<li>What is Unit Testing?</li>
+							<li>Why Unit Test?</li>
+							<li>Unit Testing Framework</li>
+							<li>Unit Testing Toolbox</li>
+							<li>Test Driven Development (TDD)</li>
+							<li>Debugging tests</li>
+							<li>Advanced topics</li>
+							<li>Mocking and Stubbing</li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>What is Unit Testing?</h2>
+						<p>
+							<ul>
+								<li>Testing individual units of code</li>
+								<li>In ColdFusion a unit is generally a CFC</li>
+								<li>Test cases ensure code behaves as intended</li>
+								<li>Test cases are run in isolation</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2>What Unit Testing is NOT</h2>
+						<p>
+							<ul>
+								<li>Integration testing</li>
+								<li>Part of your user application</li>
+								<li>Throw away code</li>
+							</ul>
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Why Unit Test?</h2>
+					<p>
+						<ul>
+							<li>Facilitate refactoring?</li>
+							<li>Repeatable tests == freedom!</li>
+							<li>Simplify integration testing</li>
+							<li>Easier when the &quot;parts&quot; are tested</li>
+							<li>Provides application design and documentation</li>
+							<li>Built-in, maintained and always current</li>
+							<li>Weed out logical errors for certain data scenarios</li>
+							<li>Provides a runner for your unit of code for easier testing when developing</li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Unit Testing Framework</h2>
+						<p>
+							<ul>
+								<li>MXUnit</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2>About MXUnit</h2>
+						<p>
+							<ul>
+								<li>MXUnit</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2>Installing MXUnit</h2>
+						<p>
+							<ul>
+								<li>MXUnit</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2>MXUnit Plugins</h2>
+						<p>
+							<ul>
+								<li>Eclispe</li>
+								<li>Sublime</li>
+							</ul>
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Anatomy of a Test Case</h2>
+						<p>
+							<ul>
+								<li>File is a CFC</li>
+								<li>Filename starts or ends with &quot;test&quot;</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2>Assertions</h2>
+					</section>
+					<section>
+						<h2>Anatomy of a Test Case</h2>
+					</section>
+				</section>
+
+
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
@@ -243,26 +372,34 @@ linkify( 'a' );
 				<section>
 					<h1>THE END</h1>
 					<h3 class="inverted">BY Hakim El Hattab / hakim.se</h3>
+					<p>
+						<img class="overrideSectionImage" width="368" height="352" src="assets/images/hands_up.jpg">
+					</p>
 				</section>
 			</div>
 
 			<!-- The navigational controls UI -->
 			<aside class="controls">
-				<a class="left" href="#">&#x25C4;</a>
+				<a class="left"  href="#">&#x25C4;</a>
 				<a class="right" href="#">&#x25BA;</a>
-				<a class="up" href="#">&#x25B2;</a>
-				<a class="down" href="#">&#x25BC;</a>
+				<a class="up"    href="#">&#x25B2;</a>
+				<a class="down"  href="#">&#x25BC;</a>
 			</aside>
 
 			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
 			<div class="progress"><span></span></div>
+
+			<!-- TODO: Add small logo to the top right of the presentation-->
+			<div class="logo"><span></span></div>
+			<!-- The title of the presentation, fixed to the bottom left hand corner -->
+			<div class="presentationTitle"><span><small><em>Unit Testing for ColdFusion Developers - Niall O&apos;Doherty</em></small></span></div>
 			
 		</div>
 
 		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
 		<script src="lib/highlight.js"></script>
 		<script src="lib/classList.js"></script>
-		
+		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 		<script src="js/reveal.js"></script>
 		
 		<script>
@@ -270,6 +407,28 @@ linkify( 'a' );
 			var query = {};
 			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
 				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			function fade_in( elem, delay )
+			{
+				elem.fadeIn( delay, function(){ 
+					fade_in( elem.next(), delay ); 
+				});
+			}
+
+			function toggleTitle( event )
+			{
+				// Add some animation to show or hide the presentation title.  I only want it hidden on the title slide!!
+				if( event.indexh === 0 && event.indexv === 0 ) {
+			    	$('.presentationTitle').slideUp();
+			    } else {
+			    	$('.presentationTitle').slideDown();
+			    }
+			}
+
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+			    // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+			    toggleTitle( event );
 			} );
 
 			// Fires when a slide with data-state=customevent is activated
@@ -280,6 +439,17 @@ linkify( 'a' );
 			// Fires each time a new slide is activated
 			Reveal.addEventListener( 'slidechanged', function( event ) {
 				// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+				//alert('Slide changed');
+			} );
+
+			Reveal.addEventListener( 'about', function() {
+				$('#contactList li').hide();
+				fade_in($('#contactList li:first'), 600);																
+			} );
+
+			Reveal.addEventListener( 'overview', function() {
+				$('#overviewList li').hide();
+				fade_in($('#overviewList li:first'), 600);																
 			} );
 
 			Reveal.initialize({
